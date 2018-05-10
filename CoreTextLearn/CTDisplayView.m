@@ -8,7 +8,7 @@
 
 #import "CTDisplayView.h"
 #import "CoreTextData.h"
-
+#import "CoreTextImageData.h"
 @implementation CTDisplayView
 
 - (void)drawRect:(CGRect)rect {
@@ -22,6 +22,14 @@
 	if (self.data) {
 		CTFrameDraw(self.data.ctFrame, context);
 	}
+	
+	for (CoreTextImageData *data in self.data.images) {
+		UIImage *image = [UIImage imageNamed:data.imageName];
+		if (image) {
+			CGContextDrawImage(context, data.imagePosition, image.CGImage);
+		}
+	}
+	
 }
 
 @end

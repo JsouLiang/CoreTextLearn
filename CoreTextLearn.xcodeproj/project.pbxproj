@@ -21,6 +21,8 @@
 		EC3C95E820A41E6300B51014 /* CTFrameParser+TemplateParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95E720A41E6300B51014 /* CTFrameParser+TemplateParser.m */; };
 		EC3C95EA20A423A800B51014 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = EC3C95E920A423A800B51014 /* content.json */; };
 		EC3C95ED20A424E300B51014 /* CTAttributeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95EC20A424E300B51014 /* CTAttributeFactory.m */; };
+		EC3C95F020A4303000B51014 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95EF20A4303000B51014 /* CoreTextImageData.m */; };
+		EC3C95F220A4455B00B51014 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,9 @@
 		EC3C95E920A423A800B51014 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		EC3C95EB20A424E300B51014 /* CTAttributeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAttributeFactory.h; sourceTree = "<group>"; };
 		EC3C95EC20A424E300B51014 /* CTAttributeFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAttributeFactory.m; sourceTree = "<group>"; };
+		EC3C95EE20A4303000B51014 /* CoreTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
+		EC3C95EF20A4303000B51014 /* CoreTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
+		EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		EC3C95B620A3EFF300B51014 /* CoreTextLearn */ = {
 			isa = PBXGroup;
 			children = (
+				EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */,
 				EC3C95E920A423A800B51014 /* content.json */,
 				EC3C95B720A3EFF300B51014 /* AppDelegate.h */,
 				EC3C95B820A3EFF400B51014 /* AppDelegate.m */,
@@ -92,6 +98,8 @@
 				EC3C95CE20A3F02A00B51014 /* CTDisplayView.m */,
 				EC3C95E220A4152200B51014 /* CoreTextData.h */,
 				EC3C95DE20A4152200B51014 /* CoreTextData.m */,
+				EC3C95EE20A4303000B51014 /* CoreTextImageData.h */,
+				EC3C95EF20A4303000B51014 /* CoreTextImageData.m */,
 				EC3C95EB20A424E300B51014 /* CTAttributeFactory.h */,
 				EC3C95EC20A424E300B51014 /* CTAttributeFactory.m */,
 				EC3C95E020A4152200B51014 /* CTFrameParser.h */,
@@ -169,6 +177,7 @@
 				EC3C95C420A3EFF500B51014 /* LaunchScreen.storyboard in Resources */,
 				EC3C95C120A3EFF500B51014 /* Assets.xcassets in Resources */,
 				EC3C95BF20A3EFF400B51014 /* Main.storyboard in Resources */,
+				EC3C95F220A4455B00B51014 /* coretext-image-2.jpg in Resources */,
 				EC3C95EA20A423A800B51014 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3C95F020A4303000B51014 /* CoreTextImageData.m in Sources */,
 				EC3C95ED20A424E300B51014 /* CTAttributeFactory.m in Sources */,
 				EC3C95E820A41E6300B51014 /* CTFrameParser+TemplateParser.m in Sources */,
 				EC3C95BC20A3EFF400B51014 /* ViewController.m in Sources */,
