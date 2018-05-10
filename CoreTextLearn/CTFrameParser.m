@@ -7,7 +7,7 @@
 //
 
 #import "CTFrameParser.h"
-#import "CoreTextData.h"
+#import "CTAttributeFactory.h"
 #import "CTFrameParserConfig.h"
 
 @implementation CTFrameParser
@@ -34,50 +34,10 @@
 }
 
 + (CoreTextData *)parseContent:(NSString *)content config:(CTFrameParserConfig *)config {
-	NSDictionary *attributes = [self attributesWithConfigure:config];
+	NSDictionary *attributes = [CTAttributeFactory attributesWithConfigure:config];
 	NSAttributedString *contentString = [[NSAttributedString alloc] initWithString:content
 																		attributes:attributes];
 	return [self parseAttributeContent:contentString config:config];
-}
-
-+ (NSMutableAttributedString *)loadTemplateFile:(NSString *)path
-								  config:(CTFrameParserConfig *)config
-								  images:(NSMutableArray *)images {
-	NSData *data = [NSData dataWithContentsOfFile:path];
-	NSMutableAttributedString *mutableAttributeStr = [[NSMutableAttributedString alloc] init];
-	if (data) {
-		NSArray *array = [NSJSONSerialization JSONObjectWithData:data
-														 options:NSJSONReadingAllowFragments
-														   error:nil];
-		if ([array isKindOfClass:[NSArray class]]) {
-			
-		}
-	}
-	return mutableAttributeStr;
-}
-
-+ (NSDictionary *)attributesWithConfigure:(CTFrameParserConfig *)config {
-	CGFloat fontSize = config.fontSize;
-	CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
-	
-	CGFloat lineSpace = config.lineSpace;
-	const CFIndex kNumberOfSettings = 3;
-	CTParagraphStyleSetting paragraphSettings[] =  {
-		{kCTParagraphStyleSpecifierLineSpacingAdjustment, sizeof(CGFloat), &lineSpace},
-		{kCTParagraphStyleSpecifierMaximumLineSpacing, sizeof(CGFloat), &lineSpace},
-		{kCTParagraphStyleSpecifierMinimumLineSpacing, sizeof(CGFloat), &lineSpace}
-	};
-	CTParagraphStyleRef paragraphRef = CTParagraphStyleCreate(paragraphSettings, kNumberOfSettings);
-	
-	UIColor *textColor = config.textColor;
-	NSDictionary *dic = @{
-						  (id)kCTForegroundColorAttributeName: (__bridge id)textColor.CGColor,
-						  (id)kCTFontAttributeName: (__bridge id)fontRef,
-						  (id)kCTParagraphStyleAttributeName: (__bridge id)paragraphRef
-						  };
-	CFRelease(paragraphRef);
-	CFRelease(fontRef);
-	return dic;
 }
 
 + (CTFrameRef)createFrameWithFrameSetter:(CTFramesetterRef)frameSetter

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 /**
  绘制配置类，用于配置绘制参数，如颜色，大小间距等
- 这个Config用于配置整个文本一致的参数
+ 这个Config用于配置整个文本一致的参数，如果改变单独某段的字体颜色等，用 AttributeString指定
  */
 @interface CTFrameParserConfig : NSObject
 

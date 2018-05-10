@@ -6,8 +6,10 @@
 //  Copyright © 2018年 Liang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-@class CoreTextData, CTFrameParserConfig;
+#import <UIKit/UIKit.h>
+#import "CoreTextData.h"
+
+@class CTFrameParserConfig;
 /**
  通过ParserConfig 生成 CTFrameRef
  */
