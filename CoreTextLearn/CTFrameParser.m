@@ -44,7 +44,7 @@
 								  config:(CTFrameParserConfig *)config
 								  height:(CGFloat)height {
 	CGMutablePathRef path = CGPathCreateMutable();
-	CGPathAddRect(path, NULL, CGRectMake(0, 0, config.width, height));
+	CGPathAddRect(path, NULL, CGRectMake(100, 0, config.width, height));
 	CTFrameRef frameRef = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), path, NULL);
 	CFRelease(path);
 	return frameRef;

@@ -73,8 +73,10 @@
 			
 			CGPathRef pathRef = CTFrameGetPath(self.ctFrame);
 			CGRect colRect = CGPathGetBoundingBox(pathRef);
+			// 这里需要与创建Path的Rect做下偏移, 防止设置的path不是从(0,0)点设置的
 			CGRect delegateBounds = CGRectOffset(runBounds, colRect.origin.x, colRect.origin.y);
 			imageData.imagePosition = delegateBounds;
+//			imageData.imagePosition = runBounds;
 			imageIndex++;
 			if (imageIndex == self.images.count) {
 				imageData = nil;
