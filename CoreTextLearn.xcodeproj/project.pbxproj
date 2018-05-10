@@ -15,6 +15,9 @@
 		EC3C95C720A3EFF500B51014 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95C620A3EFF500B51014 /* main.m */; };
 		EC3C95CF20A3F02A00B51014 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95CE20A3F02A00B51014 /* CTDisplayView.m */; };
 		EC3C95D320A3F31900B51014 /* UIView+FrameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95D220A3F31900B51014 /* UIView+FrameAdjust.m */; };
+		EC3C95E320A4152200B51014 /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95DE20A4152200B51014 /* CoreTextData.m */; };
+		EC3C95E420A4152200B51014 /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95DF20A4152200B51014 /* CTFrameParser.m */; };
+		EC3C95E520A4152200B51014 /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95E120A4152200B51014 /* CTFrameParserConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		EC3C95CE20A3F02A00B51014 /* CTDisplayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		EC3C95D120A3F31900B51014 /* UIView+FrameAdjust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameAdjust.h"; sourceTree = "<group>"; };
 		EC3C95D220A3F31900B51014 /* UIView+FrameAdjust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameAdjust.m"; sourceTree = "<group>"; };
+		EC3C95DD20A4152100B51014 /* CTFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFrameParserConfig.h; sourceTree = "<group>"; };
+		EC3C95DE20A4152200B51014 /* CoreTextData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextData.m; sourceTree = "<group>"; };
+		EC3C95DF20A4152200B51014 /* CTFrameParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrameParser.m; sourceTree = "<group>"; };
+		EC3C95E020A4152200B51014 /* CTFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFrameParser.h; sourceTree = "<group>"; };
+		EC3C95E120A4152200B51014 /* CTFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
+		EC3C95E220A4152200B51014 /* CoreTextData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextData.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,12 @@
 				EC3C95D220A3F31900B51014 /* UIView+FrameAdjust.m */,
 				EC3C95CD20A3F02A00B51014 /* CTDisplayView.h */,
 				EC3C95CE20A3F02A00B51014 /* CTDisplayView.m */,
+				EC3C95E220A4152200B51014 /* CoreTextData.h */,
+				EC3C95DE20A4152200B51014 /* CoreTextData.m */,
+				EC3C95E020A4152200B51014 /* CTFrameParser.h */,
+				EC3C95DF20A4152200B51014 /* CTFrameParser.m */,
+				EC3C95DD20A4152100B51014 /* CTFrameParserConfig.h */,
+				EC3C95E120A4152200B51014 /* CTFrameParserConfig.m */,
 				EC3C95BD20A3EFF400B51014 /* Main.storyboard */,
 				EC3C95C020A3EFF500B51014 /* Assets.xcassets */,
 				EC3C95C220A3EFF500B51014 /* LaunchScreen.storyboard */,
@@ -156,6 +171,9 @@
 				EC3C95C720A3EFF500B51014 /* main.m in Sources */,
 				EC3C95CF20A3F02A00B51014 /* CTDisplayView.m in Sources */,
 				EC3C95B920A3EFF400B51014 /* AppDelegate.m in Sources */,
+				EC3C95E520A4152200B51014 /* CTFrameParserConfig.m in Sources */,
+				EC3C95E420A4152200B51014 /* CTFrameParser.m in Sources */,
+				EC3C95E320A4152200B51014 /* CoreTextData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
