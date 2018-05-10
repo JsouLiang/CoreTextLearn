@@ -13,6 +13,8 @@
  */
 @interface CTFrameParser : NSObject
 
-+ (CoreTextData *)pareContent:(NSString *)content config:(CTFrameParserConfig *)config;
++ (CoreTextData *)parseAttributeContent:(NSAttributedString *)attributeString config:(CTFrameParserConfig *)config;
+
++ (CoreTextData *)parseContent:(NSString *)content config:(CTFrameParserConfig *)config;
 
 @end

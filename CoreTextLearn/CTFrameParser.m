@@ -12,27 +12,48 @@
 
 @implementation CTFrameParser
 
-+ (CoreTextData *)pareContent:(NSString *)content config:(CTFrameParserConfig *)config {
-	NSDictionary *attributes = [self attributesWithConfigure:config];
-	NSAttributedString *contentString = [[NSAttributedString alloc] initWithString:content attributes:attributes];
-	//
-	CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)contentString);
++ (CoreTextData *)parseAttributeContent:(NSAttributedString *)attributeString
+								 config:(CTFrameParserConfig *)config {
+	CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attributeString);
 	// 计算绘制Sting所需要的区域
-	CGSize restrictSize = CGSizeMake(config.width, CGFLOAT_MAX);
-	CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(0, 0), NULL, restrictSize, NULL);
-	CGFloat textHeight = coreTextSize.height;
+	CGSize restrictSize = CGSizeMake(config.width, CGFLOAT_MAX);		// 最大Size
+	CGSize practicalSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, restrictSize, NULL);
+	CGFloat contentHeight = practicalSize.height;
 	// 创建frame
-	CTFrameRef frame = [self createFrameWithFrameSetter:frameSetter config:config height:textHeight];
-	
+	CTFrameRef frame = [self createFrameWithFrameSetter:framesetter config:config height:contentHeight];
 	// 将生成好的CTFrame实例和计算好的绘制高度保存到CoreTextData中
 	CoreTextData *coreTextData = [[CoreTextData alloc] init];
 	coreTextData.ctFrame = frame;
-	coreTextData.height = textHeight;
+	coreTextData.height = contentHeight;
+	coreTextData.attributeContent = attributeString;
 	// 释放内存
 	CFRelease(frame);
-	CFRelease(frameSetter);
+	CFRelease(framesetter);
 	
 	return coreTextData;
+}
+
++ (CoreTextData *)parseContent:(NSString *)content config:(CTFrameParserConfig *)config {
+	NSDictionary *attributes = [self attributesWithConfigure:config];
+	NSAttributedString *contentString = [[NSAttributedString alloc] initWithString:content
+																		attributes:attributes];
+	return [self parseAttributeContent:contentString config:config];
+}
+
++ (NSMutableAttributedString *)loadTemplateFile:(NSString *)path
+								  config:(CTFrameParserConfig *)config
+								  images:(NSMutableArray *)images {
+	NSData *data = [NSData dataWithContentsOfFile:path];
+	NSMutableAttributedString *mutableAttributeStr = [[NSMutableAttributedString alloc] init];
+	if (data) {
+		NSArray *array = [NSJSONSerialization JSONObjectWithData:data
+														 options:NSJSONReadingAllowFragments
+														   error:nil];
+		if ([array isKindOfClass:[NSArray class]]) {
+			
+		}
+	}
+	return mutableAttributeStr;
 }
 
 + (NSDictionary *)attributesWithConfigure:(CTFrameParserConfig *)config {
