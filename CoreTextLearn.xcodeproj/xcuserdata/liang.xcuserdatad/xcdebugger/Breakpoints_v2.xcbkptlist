@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoreTextLearn/CoreTextData.m"
-            timestampString = "547637896.45674"
+            filePath = "CoreTextLearn/CTDisplayView.m"
+            timestampString = "547736693.2447079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-fillImagePosition"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-drawLines:context:attributeString:numberOfLines:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +35,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoreTextLearn/CoreTextData.m"
-            timestampString = "547637896.457598"
+            filePath = "CoreTextLearn/CTDisplayView.m"
+            timestampString = "547736693.245119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-fillImagePosition"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-drawLines:context:attributeString:numberOfLines:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoreTextLearn/CTDisplayView.m"
+            timestampString = "547736693.245396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-drawLines:context:attributeString:numberOfLines:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

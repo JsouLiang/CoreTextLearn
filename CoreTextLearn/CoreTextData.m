@@ -42,11 +42,16 @@
 	int imageIndex = 0;
 	CoreTextImageData *imageData = self.images[0];
 	for (int i = 0; i < lineCount; i++) {			// 遍历每行(遍历CTLine数组)
+		// Line
+		CTLineRef line = (__bridge CTLineRef)lines[i];
+		NSLog(@"Line Origin: (x: %f, y: %f) ",lineOrigins[i].x, lineOrigins[i].y);
+//		CGFloat lineAscent, lineDescent, lineLeading;
+//		CGFloat lineWidth = CTLineGetTypographicBounds(line, &lineAscent, &lineDescent, &lineLeading);
+		
 		if (!imageData) {
 			break ;
 		}
-		// Line
-		CTLineRef line = (__bridge CTLineRef)lines[i];
+		
 		// 获取该行中所有的 CTRun: CTRun 是一组相同Attribute的字符的合集，CoreText绘制的最小单位
 		NSArray *runs = (NSArray *)CTLineGetGlyphRuns(line);
 		for (id runObj in runs) {

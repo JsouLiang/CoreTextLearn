@@ -23,6 +23,7 @@
 		EC3C95ED20A424E300B51014 /* CTAttributeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95EC20A424E300B51014 /* CTAttributeFactory.m */; };
 		EC3C95F020A4303000B51014 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95EF20A4303000B51014 /* CoreTextImageData.m */; };
 		EC3C95F220A4455B00B51014 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */; };
+		EC3C95F520A46B0B00B51014 /* CTTextDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95F420A46B0B00B51014 /* CTTextDrawer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		EC3C95EE20A4303000B51014 /* CoreTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
 		EC3C95EF20A4303000B51014 /* CoreTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
 		EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
+		EC3C95F320A46B0B00B51014 /* CTTextDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTextDrawer.h; sourceTree = "<group>"; };
+		EC3C95F420A46B0B00B51014 /* CTTextDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTextDrawer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				EC3C95D220A3F31900B51014 /* UIView+FrameAdjust.m */,
 				EC3C95CD20A3F02A00B51014 /* CTDisplayView.h */,
 				EC3C95CE20A3F02A00B51014 /* CTDisplayView.m */,
+				EC3C95F320A46B0B00B51014 /* CTTextDrawer.h */,
+				EC3C95F420A46B0B00B51014 /* CTTextDrawer.m */,
 				EC3C95E220A4152200B51014 /* CoreTextData.h */,
 				EC3C95DE20A4152200B51014 /* CoreTextData.m */,
 				EC3C95EE20A4303000B51014 /* CoreTextImageData.h */,
@@ -191,6 +196,7 @@
 			files = (
 				EC3C95F020A4303000B51014 /* CoreTextImageData.m in Sources */,
 				EC3C95ED20A424E300B51014 /* CTAttributeFactory.m in Sources */,
+				EC3C95F520A46B0B00B51014 /* CTTextDrawer.m in Sources */,
 				EC3C95E820A41E6300B51014 /* CTFrameParser+TemplateParser.m in Sources */,
 				EC3C95BC20A3EFF400B51014 /* ViewController.m in Sources */,
 				EC3C95D320A3F31900B51014 /* UIView+FrameAdjust.m in Sources */,
