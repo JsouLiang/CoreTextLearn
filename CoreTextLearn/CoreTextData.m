@@ -28,6 +28,7 @@
 
 /**
  找到每张图片在绘制时所在的位置
+ hahalkwfe hiahoieh
  */
 - (void)fillImagePosition {
 	if (self.images.count == 0) {

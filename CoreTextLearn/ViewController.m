@@ -25,7 +25,7 @@
 	CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
 	config.textColor = [UIColor redColor];
 	config.width = self.ctView.width;
-	NSString *normalString = @"完成以上 4 个类之后，我们就可以简单地在ViewController.m文件中，加入如下代码来配置CTDisplayView的显示内容，位置，高度，字体，颜色等信息。";
+	NSString *normalString = @"CTFrameParser parseContent:normalStringCTFrameParser parseContent:normalStringCTFrameParser parseContent:normalStringCTFrameParser parseContent:normalStringCTFrameParser parseContent:normalString";
 //	CoreTextData *data = [CTFrameParser parseContent:normalString
 //											  config:config];
 //	NSMutableAttributedString *attributeStr = [[NSMutableAttributedString alloc] initWithString:normalString];

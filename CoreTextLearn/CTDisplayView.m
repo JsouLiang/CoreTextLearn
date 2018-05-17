@@ -131,7 +131,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";		// 省略号UTF-8编码
 	CGContextStrokePath(context);
 	// 绘制CoreText 轮廓
 	CGContextSetLineWidth(context, 2.0);
-	CGContextSetStrokeColorWithColor(context, UIColor.greenColor.CGColor);
+//	CGContextSetStrokeColorWithColor(context, UIColor.greenColor.CGColor);
 	CGContextAddRect(context, coreTextRect);
 	CGContextStrokePath(context);
 
@@ -149,8 +149,11 @@ static NSString* const kEllipsesCharacter = @"\u2026";		// 省略号UTF-8编码
 	
 	CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attributeString);
 	CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
-//	[self drawByLine:frame context:context];
-	[self drawLines:frame context:context attributeString:attributeString numberOfLines:1];
+	
+//	CTFrameDraw(frame, context);
+	[self drawByLine:frame context:context];
+	
+//	[self drawLines:frame context:context attributeString:attributeString numberOfLines:1];
 	CFRelease(frame);
 	CFRelease(framesetter);
 }
@@ -170,7 +173,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";		// 省略号UTF-8编码
 		NSLog(@"Line Origin: (x: %f, y: %f) ",lineOrigins[index].x, lineOrigins[index].y);
 
 		CFRange lastLineRange = CTLineGetStringRange(line);
-		NSLog(@"Current Line Range: (location: %ld, range: %f)", (float)lastLineRange.location, (float)lastLineRange.length);
+		NSLog(@"Current Line Range: (location: %f, length: %f)", (float)lastLineRange.location, (float)lastLineRange.length);
 		
 		CGFloat lineAscent, lineDescent, lineLeading; // leading 行距
 		CGFloat lineWidth = CTLineGetTypographicBounds(line, &lineAscent, &lineDescent, &lineLeading);
@@ -182,7 +185,7 @@ static NSString* const kEllipsesCharacter = @"\u2026";		// 省略号UTF-8编码
 										lineAscent + lineDescent + lineLeading
 		};
 		CGContextSetTextPosition(context, lineOrigin.x + pathRect.origin.x,
-//								 self.frame.size.height + (lineOrigin.y - pathRect.size.height));
+//								 self.fxrame.size.height + (lineOrigin.y - pathRect.size.height));
 								 lineOrigin.y);
 		
 		CGContextAddRect(context, lineBoundBox);

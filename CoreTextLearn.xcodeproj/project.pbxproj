@@ -24,6 +24,7 @@
 		EC3C95F020A4303000B51014 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95EF20A4303000B51014 /* CoreTextImageData.m */; };
 		EC3C95F220A4455B00B51014 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */; };
 		EC3C95F520A46B0B00B51014 /* CTTextDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C95F420A46B0B00B51014 /* CTTextDrawer.m */; };
+		EC4D9B3120A698A70049A5C2 /* UIFont+FontVariation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4D9B3020A698A70049A5C2 /* UIFont+FontVariation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		EC3C95F120A4455A00B51014 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 		EC3C95F320A46B0B00B51014 /* CTTextDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTextDrawer.h; sourceTree = "<group>"; };
 		EC3C95F420A46B0B00B51014 /* CTTextDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTextDrawer.m; sourceTree = "<group>"; };
+		EC4D9B2F20A698A70049A5C2 /* UIFont+FontVariation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontVariation.h"; sourceTree = "<group>"; };
+		EC4D9B3020A698A70049A5C2 /* UIFont+FontVariation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontVariation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				EC3C95BB20A3EFF400B51014 /* ViewController.m */,
 				EC3C95D120A3F31900B51014 /* UIView+FrameAdjust.h */,
 				EC3C95D220A3F31900B51014 /* UIView+FrameAdjust.m */,
+				EC4D9B2F20A698A70049A5C2 /* UIFont+FontVariation.h */,
+				EC4D9B3020A698A70049A5C2 /* UIFont+FontVariation.m */,
 				EC3C95CD20A3F02A00B51014 /* CTDisplayView.h */,
 				EC3C95CE20A3F02A00B51014 /* CTDisplayView.m */,
 				EC3C95F320A46B0B00B51014 /* CTTextDrawer.h */,
@@ -198,6 +203,7 @@
 				EC3C95ED20A424E300B51014 /* CTAttributeFactory.m in Sources */,
 				EC3C95F520A46B0B00B51014 /* CTTextDrawer.m in Sources */,
 				EC3C95E820A41E6300B51014 /* CTFrameParser+TemplateParser.m in Sources */,
+				EC4D9B3120A698A70049A5C2 /* UIFont+FontVariation.m in Sources */,
 				EC3C95BC20A3EFF400B51014 /* ViewController.m in Sources */,
 				EC3C95D320A3F31900B51014 /* UIView+FrameAdjust.m in Sources */,
 				EC3C95C720A3EFF500B51014 /* main.m in Sources */,
